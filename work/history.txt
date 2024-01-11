@@ -1,0 +1,231 @@
+    1  ls
+    2  cd
+    3  ls
+    4  pwd
+    5  wget github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz
+    6  tar -zxf pcre2-10.42.tar.gz
+    7  cd pcre2-10.42
+    8  ./configure
+    9  make
+   10  sudo make install
+   11  ls
+   12  wget github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz
+   13  apt update
+   14  apt install wget tar make
+   15  wget github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz
+   16  tar -zxf pcre2-10.42.tar.gz
+   17  cd pcre2-10.42
+   18  ls
+   19  cat configure
+   20  ./configure
+   21  apt install gcc
+   22  ./configure
+   23  wget http://zlib.net/zlib-1.2.13.tar.gz
+   24  wget https://www.zlib.net/fossils/zlib-1.2.13.tar.gz
+   25  tar -zxf zlib-1.2.13.tar.gz
+   26  cd zlib-1.2.13
+   27  ./configure
+   28  history
+   29  cd ..
+   30  mv zlib-1.2.13 ../
+   31  cd ..
+   32  ls
+   33  cd pcre2-10.42
+   34  ls
+   35  rm zlib-1.2.13.tar.gz 
+   36  make
+   37  make install
+   38  cd ..
+   39  ls
+   40  cd zlib-1.2.13/
+   41  ls
+   42  make
+   43  make install
+   44  cd ..
+   45  ls
+   46  wget http://www.openssl.org/source/openssl-1.1.1v.tar.gz
+   47  tar -zxf openssl-1.1.1v.tar.gz
+   48  cd openssl-1.1.1v
+   49  ./Configure darwin64-x86_64-cc --prefix=/usr
+   50  ls
+   51  apt install perl
+   52  ./Configure darwin64-x86_64-cc --prefix=/usr
+   53  make
+   54  ./Configure darwin64-x86_64-cc --prefix=/usr
+   55  ls
+   56  cat Configur
+   57  cat Configure
+   58  ./Configure darwin64-x86_64-cc --prefix=/usr
+   59  perl configdata.pm --dump  
+   60  make
+   61  perl configdata.pm --dump | grep arch
+   62  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2'
+   63  make
+   64  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-march'
+   65  make
+   66  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32'
+   67  make
+   68  ./Configure --help
+   69  ls
+   70  make
+   71  ./Configure darwin64-x86_64-cc --prefix=/usr
+   72  make
+   73  ./Configure darwin64-x86_64-cc --prefix=/usr
+   74  make
+   75  ./Configure darwin64-x86_64-cc --prefix=/usr
+   76  make
+   77  ./Configure darwin64-x86_64-cc --prefix=/usr
+   78  ./Configure --prefix=/usr
+   79  make
+   80  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2' CC=gcc-4.5
+   81  make
+   82  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2'
+   83  make
+   84  gcc -v
+   85  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2' CC=gcc-11.4
+   86  make
+   87  gcc -v
+   88  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2' CC=gcc-11.4.0
+   89  make
+   90  gcc -v
+   91  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2'
+   92  make
+   93  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-m32 -O2' CC=gcc
+   94  make
+   95  ./Configure darwin64-x86_64-cc
+   96  make
+   97  ./Configure
+   98  ./Configure darwin64-x86_64-cc --prefix=/usr
+   99  make
+  100  ./Configure darwin64-x86_64-cc --prefix=/usr
+  101  make
+  102  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='-arch x86_64 -Wa,--noexecstack'
+  103  make
+  104  ./Configure darwin64-x86_64-cc --prefix=/usr CFLAGS='x86_64 -Wa,--noexecstack'
+  105  make
+  106  ./Configure darwin64-x86_64-cc --prefix=/usr CNF_CFLAGS='x86_64 -Wa,--noexecstack'
+  107  make
+  108  apt install gcc-arch
+  109  apt install arch
+  110  ./Configure darwin64-x86_64-cc --prefix=/usr --no-hw=-arch
+  111  make
+  112  ./Configure darwin64-x86_64-cc --prefix=/usr
+  113  make
+  114  ./Configure darwin64-x86_64-cc --prefix=/usr
+  115  make
+  116  ./Configure --prefix=/usr
+  117  make
+  118  cd ..
+  119  ls
+  120  rm -r openssl-1.1.1v
+  121  tar -zxf openssl-1.1.1v.tar.gz
+  122  cd openssl-1.1.1v
+  123  ls
+  124  ./Configure --prefix=/usr
+  125  ./config
+  126  make
+  127  make install
+  128  cd ..
+  129  ls
+  130  wget https://nginx.org/download/nginx-1.24.0.tar.gz
+  131  tar zxf nginx-1.24.0.tar.gz
+  132  cd nginx-1.24.0
+  133  ls
+  134  ./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-pcre=../pcre2-10.42 --with-zlib=../zlib-1.2.13 --with-http_ssl_module --with-stream --with-mail=dynamic --add-module=/usr/build/nginx-rtmp-module --add-dynamic-module=/usr/build/3party_module --add-module=path/to/nginx_upload_module
+  135  ./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-pcre=../pcre2-10.42 --with-zlib=../zlib-1.2.13 --with-http_ssl_module --with-stream --with-mail=dynamic --add-dynamic-module=/usr/build/3party_module --add-module=path/to/nginx_upload_module
+  136  ls
+  137  cd src
+  138  ls
+  139  cd ..
+  140  ls
+  141  wget https://github.com/vkholodkov/nginx-upload-module/releases/tag/2.3.0
+  142  ls
+  143  history | tar
+  144  history | grep tar
+  145  ls
+  146  tar -zxf 2.3.0
+  147  ls
+  148  rm 2.3.0
+  149  wget https://github.com/vkholodkov/nginx-upload-module/archive/refs/tags/2.3.0.tar.gz
+  150  ls
+  151  tar -zxf 2.3.0.tar.gz
+  152  ls
+  153  cd nginx-
+  154  cd nginx-upload-module-2.3.0/
+  155  ls
+  156  pwd
+  157  ./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-pcre=../pcre2-10.42 --with-zlib=../zlib-1.2.13 --with-http_ssl_module --with-stream --with-mail=dynamic --add-dynamic-module=/usr/build/3party_module --add-module=/root/nginx-upload-module-2.3.0
+  158  cd ..
+  159  ls
+  160  cd nginx-1.24.0
+  161  ./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-pcre=../pcre2-10.42 --with-zlib=../zlib-1.2.13 --with-http_ssl_module --with-stream --with-mail=dynamic --add-dynamic-module=/usr/build/3party_module --add-module=/root/nginx-upload-module-2.3.0
+  162  ./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/usr/local/nginx/nginx.pid --with-pcre=../pcre2-10.42 --with-zlib=../zlib-1.2.13 --with-http_ssl_module --with-stream --with-mail=dynamic --add-module=/root/nginx-upload-module-2.3.0
+  163  make
+  164  make install
+  165  ls
+  166  cd src
+  167  ls
+  168  cd ..
+  169  ls
+  170  make
+  171  ls
+  172  cd contrib/
+  173  ls
+  174  cd ..
+  175  ls
+  176  cd objs/
+  177  ls
+  178  ls -lh
+  179  cd ..
+  180  ls
+  181  cd man/
+  182  ls
+  183  ls -lh
+  184  cd ..
+  185  ls
+  186  cd src
+  187  ;s
+  188  ls
+  189  cd ..
+  190  ;s
+  191  ls
+  192  cd auto
+  193  ls
+  194  cd cc
+  195  ls
+  196  cd ..
+  197  ls
+  198  make install
+  199  cd /usr/local/nginx
+  200  ls
+  201  ls -la
+  202  ls -lh
+  203  cd modules/
+  204  ls
+  205  cd ..
+  206  ./nginx
+  207  cd /etc/nginx
+  208  ls
+  209  cd /etc/nginx
+  210  cd /usr/sbin/nginx
+  211  ls
+  212  vi /usr/lib/systemd/system/nginx.service
+  213  apt install vim
+  214  vi /usr/lib/systemd/system/nginx.service
+  215  systemctl start nginx
+  216  service
+  217  service nginx start
+  218  cd /usr/lib/systemd/system
+  219  ls
+  220  systemctl
+  221  apt install systemctl
+  222  systemctl daemon-reload
+  223  service nginx start
+  224  nginx
+  225  ls
+  226  cd /usr/local/nginx
+  227  ls
+  228  nginx
+  229  ./nginx
+  230  ./nginx -V
+  
