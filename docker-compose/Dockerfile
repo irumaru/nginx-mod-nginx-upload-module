@@ -1,7 +1,7 @@
 FROM debian:stable
 
 WORKDIR /root
-COPY ./configure /root/ngx_configure
+COPY ./config /root/config
 RUN apt update && apt upgrade -y &&\
     apt install -y wget make gcc perl &&\
     wget github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz &&\
@@ -30,7 +30,7 @@ RUN apt update && apt upgrade -y &&\
     tar -zxf 2.3.0.tar.gz &&\
     tar -zxf nginx-1.24.0.tar.gz &&\
     cd nginx-1.24.0 &&\
-    grep -v '^#' ../ngx_configure | tr '\n' ' ' | xargs ./configure &&\
+    grep -v '^#' ~/config/configure | tr '\n' ' ' | xargs ./configure &&\
     make &&\
     mkdir -p /usr/local/nginx/sbin &&\
     mkdir -p /usr/lib/nginx/modules &&\
@@ -43,8 +43,11 @@ RUN apt update && apt upgrade -y &&\
     chown -R nginx:nginx /var/cache/nginx &&\
     chown -R nginx:nginx /var/run/nginx &&\
     make install &&\
-    sed -i 's/listen       80;/listen       8080;/g' /etc/nginx/nginx.conf &&\
+    mkdir -p /etc/nginx/conf.d &&\
+    cp ~/config/nginx.conf /etc/nginx/nginx.conf &&\
+    cp ~/config/default.conf /etc/nginx/conf.d/default.conf &&\
     ln -s /usr/local/nginx/sbin/nginx /usr/local/sbin/ &&\
+    cd .. &&\
     apt purge --autoremove -y wget make gcc perl &&\
     rm -rf /var/lib/apt/lists/* &&\
     rm -rf /root/* 
