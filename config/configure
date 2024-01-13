@@ -22,7 +22,7 @@
 --group=nginx
 # 含めるモジュール
 --with-pcre=../pcre2-10.42
---with-zlib=../zlib-1.2.13
+--with-zlib=../zlib-1.3
 --with-compat
 --with-file-aio
 --with-threads

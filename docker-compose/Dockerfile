@@ -5,7 +5,7 @@ COPY ./config /root/config
 RUN apt update && apt upgrade -y &&\
     apt install -y wget make gcc perl &&\
     wget github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz &&\
-    wget https://www.zlib.net/fossils/zlib-1.2.13.tar.gz &&\
+    wget https://www.zlib.net/zlib-1.3.tar.gz &&\
     wget https://www.openssl.org/source/openssl-1.1.1v.tar.gz &&\
     wget https://github.com/vkholodkov/nginx-upload-module/archive/refs/tags/2.3.0.tar.gz &&\
     wget https://nginx.org/download/nginx-1.24.0.tar.gz &&\
@@ -15,8 +15,8 @@ RUN apt update && apt upgrade -y &&\
     make &&\
     make install &&\
     cd .. &&\
-    tar -zxf zlib-1.2.13.tar.gz &&\
-    cd zlib-1.2.13 &&\
+    tar -zxf zlib-1.3.tar.gz &&\
+    cd zlib-1.3 &&\
     ./configure &&\
     make &&\
     make install &&\
