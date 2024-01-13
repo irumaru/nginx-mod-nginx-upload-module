@@ -14,7 +14,7 @@ defaultでnginx user(非root)で実行するため、1024以上のポートを�
 ## nginx upload moduleの使い方
 
 ### nginxの設定ファイル(サンプル)
-`
+```
 server {
     listen 8080;
 
@@ -51,11 +51,11 @@ server {
         proxy_pass http://target_web_server_host;
     }
 }
-`
+```
 
 ### webサーバー(サンプル)
 
-`
+```
 package main
 
 import (
@@ -88,10 +88,10 @@ func main() {
 
 	e.Logger.Fatal(e.Start(":80"))
 }
-`
+```
 
 ### webアップローダー(サンプル)
-`
+```
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -107,4 +107,4 @@ func main() {
     </form>
 </body>
 </html>
-`
+```
