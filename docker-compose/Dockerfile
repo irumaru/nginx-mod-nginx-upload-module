@@ -3,11 +3,11 @@ FROM debian:stable
 WORKDIR /root
 COPY ./config /root/config
 RUN apt update && apt upgrade -y &&\
-    apt install -y wget make gcc perl &&\
+    apt install -y wget make gcc perl git &&\
     wget github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz &&\
-    wget https://www.zlib.net/zlib-1.3.tar.gz &&\
+    wget https://www.zlib.net/zlib-1.3.1.tar.gz &&\
     wget https://www.openssl.org/source/openssl-1.1.1v.tar.gz &&\
-    wget https://github.com/vkholodkov/nginx-upload-module/archive/refs/tags/2.3.0.tar.gz &&\
+    git clone https://github.com/maber1993/nginx-upload-module.git &&\
     wget https://nginx.org/download/nginx-1.24.0.tar.gz &&\
     tar -zxf pcre2-10.42.tar.gz &&\
     cd pcre2-10.42 &&\
@@ -15,8 +15,8 @@ RUN apt update && apt upgrade -y &&\
     make &&\
     make install &&\
     cd .. &&\
-    tar -zxf zlib-1.3.tar.gz &&\
-    cd zlib-1.3 &&\
+    tar -zxf zlib-1.3.1.tar.gz &&\
+    cd zlib-1.3.1 &&\
     ./configure &&\
     make &&\
     make install &&\
@@ -27,7 +27,6 @@ RUN apt update && apt upgrade -y &&\
     make &&\
     make install &&\
     cd .. &&\
-    tar -zxf 2.3.0.tar.gz &&\
     tar -zxf nginx-1.24.0.tar.gz &&\
     cd nginx-1.24.0 &&\
     grep -v '^#' ~/config/configure | tr '\n' ' ' | xargs ./configure &&\

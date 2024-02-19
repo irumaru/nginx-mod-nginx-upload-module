@@ -2,7 +2,7 @@
 
 ## 実行方法
 `
-docker run -p 8080:8080 -d irumaru/nginx-mod-nginx-upload-module:1.24.0-0.3.2
+docker run -p 8080:8080 -d irumaru/nginx-mod-nginx-upload-module:1.24.0-0.4.1
 `
 
 defaultでnginx user(非root)で実行するため、1024以上のポートを使用可能。  
@@ -41,7 +41,10 @@ server {
         upload_aggregate_form_field "$upload_field_name.md5" "$upload_file_md5";
         upload_aggregate_form_field "$upload_field_name.size" "$upload_file_size";
 
-        upload_pass_form_field "check";
+        # この項目は以下の理由により、ファイル以外を全てパス(転送)するよう変更中のため、設定不要
+        # https://github.com/fdintino/nginx-upload-module/issues/140#issuecomment-1192776396
+        # irumaru/nginx-mod-nginx-upload-module:1.24.0-0.4.1の以降の仕様
+        #upload_pass_form_field "^meta\..*";
 
         upload_cleanup 400 404 499 500-505;
     }

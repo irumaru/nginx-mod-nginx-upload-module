@@ -22,7 +22,7 @@
 --group=nginx
 # 含めるモジュール
 --with-pcre=../pcre2-10.42
---with-zlib=../zlib-1.3
+--with-zlib=../zlib-1.3.1
 --with-compat
 --with-file-aio
 --with-threads
@@ -48,4 +48,4 @@
 --with-stream_ssl_module
 --with-stream_ssl_preread_module
 # 追加するサードパーティー生モジュール
---add-module=../nginx-upload-module-2.3.0
+--add-module=../nginx-upload-module
